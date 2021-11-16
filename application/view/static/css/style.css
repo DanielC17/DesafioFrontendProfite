@@ -8,6 +8,7 @@ body{
     align-items: center;
     height: 5vw;
     background:#fFFF;
+    justify-content: space-around;
 }
 
 .logo{
@@ -19,7 +20,17 @@ body{
     margin-left: 15vw;
 }
 
+.busca{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+}
 
+.user{
+    display: flex;
+    align-items: center;
+}
 .banner{
     display: flex;
     flex-direction: row;

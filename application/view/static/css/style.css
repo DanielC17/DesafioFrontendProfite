@@ -1,0 +1,42 @@
+body{
+    margin: 0px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 5vw;
+    background:#fFFF;
+}
+
+.logo{
+    display: flex;
+    height: 3vw;
+}
+
+.logo > img{
+    margin-left: 15vw;
+}
+
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    height: 30vw;
+    background: #011627;
+}
+
+.produtos{
+    display: flex;
+    flex-direction: column;
+    height: 25vw;
+    background: darkgrey;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    height: 8vw;
+    background: #011627;
+}

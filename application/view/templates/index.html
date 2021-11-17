@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <title>Profite</title>
 </head>
-<body>
+<body onload="lista_produtos_json();">
     <div class="nav">
         <div class="logo">
             <img src="{{ url_for('static', filename='img/logo_profite.jpeg') }}" alt="">
@@ -24,6 +24,7 @@
                 <div class="conta"><a>Minha conta</a></div>
             </div>
             <div class="carrinho"><img src="{{ url_for('static', filename='img/carrinho.png') }}" alt=""></div>
+            <hr id="divisoria">
             <div class="idiomas">
                 <img src="{{ url_for('static', filename='img/brasilsilsil.png') }}" alt="">
             </div>
@@ -49,29 +50,60 @@
         
     </div>
     <div class="produtos">
-
+        <div class="titulo">
+            <h1>Produtos</h1>
+            <div class="retangulo"></div>
+        </div>
+        <div id="produtos_lista">carregando</div>
     </div>
     <footer>
-        <h1 class="local">Localização</h1>
+        <div class="endereco">
+            <h1 class="local">Localização</h1>
 
-        <div class="retangulo"></div>
+            <div class="retangulo"></div>
 
-        <div class="conteudo">
-            <div class="contact">
-                <p class="text_local">São Paulo</p>
-                <p>Rua do Rócio, 423/1801</p>
-                <p>Vila Olímpia - SP</p>
-                <p>04552-000</p>
-                <p>+55 11  3333 3333</p>
+            <div class="conteudo">
+                <div class="contact">
+                    <p class="text_local">São Paulo</p>
+                    <p>Rua do Rócio, 423/1801</p>
+                    <p>Vila Olímpia - SP</p>
+                    <p>04552-000</p>
+                    <p>+55 11  3333 3333</p>
+                </div>
+
+                <div class="contact">
+                    <p class="text_local">Rio de Janeiro</p>
+                    <p>Vol. da Pátria, 301/702</p>
+                    <p>Botafogo - RJ</p>
+                    <p>22270-000</p>
+                    <p>+55 21 3333 3333</p>
+                </div>
             </div>
-
-            <div class="contact">
-                <p class="text_local">Rio de Janeiro</p>
-                <p>Vol. da Pátria, 301/702</p>
-                <p>Botafogo - RJ</p>
-                <p>22270-000</p>
-                <p>+55 21 3333 3333</p>
-            </div>
+        </div>
+        <div class="botoes">
+            <a>
+                <img src="{{ url_for('static', filename='img/contato.png') }}" alt="">
+            </a>
+            <a>
+                <img src="{{ url_for('static', filename='img/fale.png') }}" alt="">
+            </a>
+        </div>
+        <div class="created">
+            <img src="{{ url_for('static', filename='img/create.png') }}" alt="">
+        </div>
     </footer>
 </body>
+<script>
+    function lista_produtos_json() {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "/produtos");
+        xhr.send(null);
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById("produtos_lista").innerHTML = xhr.response;
+            }
+        }
+        return false;
+    }
+</script>
 </html>

@@ -61,8 +61,8 @@ body{
 
 .banner{
     display: flex;
-    height: 50vh;
-    background: ;
+    height: 45vh;
+    
 }
 
 .img_banner{
@@ -73,6 +73,10 @@ body{
     flex-direction: row;
     height: 100%;
     width: 50%;
+}
+.hover{
+    background-color: #03564f61;
+    width: -webkit-fill-available;
 }
 
 .text_banner{
@@ -86,8 +90,8 @@ body{
 .produtos{
     display: flex;
     flex-direction: column;
-    height: 35vh;
-    background: darkgrey;
+    height: 50vh;
+    background: #fff;
 }
 
 footer{

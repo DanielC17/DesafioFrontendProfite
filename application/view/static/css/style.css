@@ -109,11 +109,55 @@ body{
     background: #fff;
 }
 
-footer{
-    display: flex;
-    flex-direction: row;
-    height: 20vh;
-    background: #011627;
+
+footer {
+    background-color: #011627;
+    height: 30vh;
 }
+
+
+.local{
+    margin-left: 15%;
+    padding-top: 10px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.retangulo {
+    width: 44px;
+    height: 4px;
+    background-color: #FF9F1C;
+    margin-left: 15%;
+}
+
+.conteudo{
+    display: flex;
+    padding-left: 15vw;
+    justify-content: flex-start;
+    height: 1vw;
+}
+.text_local{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.contact{
+    width: 15%;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+}
+
+.em_contato{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%;
+}
+
+
 
 }

@@ -1,0 +1,14 @@
+{% for produto in lista_produtos_json %}
+<div class="produto">
+    <img id="produto_img" src="{{produto.get_image()}}" alt="add">
+    <h2 class="produto_nome">{{produto.get_name()}}</h2>
+    <div class="produto_estrelas">estrelas</div>
+    <p class="produto_preco_antigo">de R$ {{produto.get_oldPrice()}}</p>
+    <p class="produto_preco">por R$ {{produto.get_price()}}</p>
+    <p class="produto_parcelado">ou em {{produto.get_count()}}x de R$ {{produto.get_value()}}</p>
+    <a class="botao_adicionar_charrinho">
+        <img src="{{url_for('static', filename='/img/carrinho_add.png')}}" alt="add">
+        <p>COMPRAR</p>
+    </a>
+</div>
+{% endfor %}

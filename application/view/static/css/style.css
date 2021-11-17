@@ -62,7 +62,25 @@ body{
 .banner{
     display: flex;
     height: 50vh;
-    background: #011627;
+    background: ;
+}
+
+.img_banner{
+    background-color:#2EC4B6;
+    background: url(../img/banner.jpeg);
+    background-repeat: round;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+}
+
+.text_banner{
+        background: #011627;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 50%;
 }
 
 .produtos{
